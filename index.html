@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fantasy Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sean & Thuvs Fantasy Cheat Sheet</h1>
+  </div>
+  <div id="app">
+    <p id="draftStatus"></p>
+    <p id="errorMessage"></p>
+    <form id="draftform">
+        <input type="text" id="playerName" placeholder="Enter Players Name" list="playerSuggestions" />
+        <datalist id="playerSuggestions"></datalist>
+        <button type="submit">Draft Player</button>
+        <button id="clearButton">Clear Drafted List</button>
+    </form>
+    <ol id="draftedList"></ol>
+  </div>
+  <div id="playerListContainer">
+    <h2>Available Players</h2>
+    <ul id="playerList"></ul>
+  </div>
+
+  <div id="container">
+    <p>
+      "130","Jamaal Williams",NO
+      "131", Jared Goff",DET
+      "132","Rashaad Penny",PHI,
+      "133","Cole Kmet",CHI
+      "134","Dalton Schultz",HOU
+      "135","Brandin Cooks",DA
+      "136","Elijah Mitchell",S
+      "137","Geno Smith",SEA
+      "138","Darnell Mooney",CHI
+      "139","Trey McBride",ARI,
+      "140","Josh Downs",IND,
+      "141","Russell Wilson",DE
+      "142","Devin Singletary",HO
+      "143","Nico Collins",HOU
+      "144","Rondale Moore",ARI
+      "145","Jalin Hyatt",NYG,
+      "146","Kenny Pickett",PIT
+      "147","Wan'Dale Robinson",NYG,
+      "148","Chase Brown",CI
+      "149","Aaron Rodgers",NYJ
+      "150","Derek Carr",NO,
+      "151","Kenneth Gainwell",PHI,
+      "152","Alec Pierce",IN
+      "153","Samaje Perine",DEN
+      "154","Jaylen Warren",PIT
+      "155","Ezekiel Elliott",NE,
+      "156","Luke Musgrave",GB
+      "157","Jordan Love",GB
+      "158","D'Onta Foreman",CHI
+      "159","Chase Claypool",CHI
+      "160","Donovan Peoples-Jones",CL
+      "161","Leonar
+      "162","Jelani Woods",IND,
+      "163","Romeo Doubs",G
+      "164","Michael Thomas",NO,
+      "165","Cedric Tillman",CLE
+      "166","Zach Evans",LAR,
+      "167","Noah Fant",SEA
+      "168","Jeff Wilson Jr.",MIA,
+      "169","Israel Abanikanda",NYJ
+      "170","Juwan Johnson",NO,
+      "171","Brock Purdy",SF
+      "172","Isaiah Likely",BAL,
+      "173","Clyde Edwards-Helaire",KC,
+      "174","Mac Jones",NE,
+      "175","Tyler Boyd",CIN
+      "176","John Metchie III",HOU
+      "177","Allen Lazard",NYJ
+      "178","Jerick McKinnon",KC
+      "179","
+      "180","DJ Chark Jr.",CAR
+      "181","Zay Jones",JA
+      "182","Michael Carter",NY
+      "183","Jerome Ford",CLE
+      "184","Trey Lance",SF
+      "185","Mike Gesicki",NE
+      "186","Chuba Hubbard",CA
+      "187","Michael Gallup",DAL
+      "188","Curtis Samuel",WAS,
+      "189","Tyler Higbee",LAR,
+      "190","Joshua Palmer",LAC
+      "191","Gerald Everett",LAC
+      "192","Hunter Renfrow",LV
+      "193","Tank Dell",HOU
+      "194","Odell Beckham Jr.",BAL,
+      "195",Luke Schoonmaker",DAL
+      "196",11,"Raheem Mostert",MIA,
+      "197",11,"Buffalo Bills",B
+      "198",11,"Pierre Strong Jr.",NE,
+      "199",11,"Khalil Shakir",BUF,
+      "200",11,"Evan Hull",IND
+      "201",11,"Dawson Knox",BUF,
+      "202",11,"Zamir White",LV
+      "203",11,"DeWayne McBride",MIN
+      "204",11,"Eric Gray",NYG,
+      "205",11,"Matthew Stafford",LAR,
+      "206",11,"Dallas Cowboys",
+      "207",11,"San Francisco 49ers"
+      "208",11,"Sam Howell",WAS,
+      "209",11,"Baltimore Ravens",B
+      "210",11,"New England Patriots",
+      "211",11,"Irv Smith Jr.",CI
+      "212",11,"Adam Thielen",CAR
+      "213",11,"Gus Edwards",BAL,
+      "214",11,"Terrace Marshall Jr.",CA
+      "215",11,"K.J. Osborn",MIN,
+      "216",11,"Michael Wilson",ARI,
+      "217",11,"Cade Otton",TB
+      "218",11,"Justin Tucker",BA
+      "219",11,"Rashid Shaheed",N
+      "220",11,"Tucker Kraft",GB
+      "221",11,"Denver Broncos",
+      "222",11,"Tyquan Thornton",NE
+      "223",11,"Will Levis",TEN
+      "224",11,"New York Jets",
+      "225",11,"Isaiah Hodgins",NYG
+      "226",11,"Desmond Ridder",ATL,
+      "227",11,"Philadelphia Eagles",P
+      "228",11,"Hunter Henry",N
+      "229",12,"Pittsburgh Steelers",
+      "230",12,"Daniel Carlson",L
+      "231",12,"Hayden Hurst",CAR
+      "232",12,"Evan McPherson",C
+      "233",12,"Kayshon Boutte",NE,
+      "234",12,"Harrison Butker",K
+      "235",12,"Parris Campbell",NYG
+      "236",12,"Isaiah Spiller",LAC
+      "237",12,"Deuce Vaughn",DAL
+      "238",12,"Tyler Scott",CH
+      "239",12,"Tyler Bass",BU
+      "240",12,"Jimmy Garoppolo",LV,
+      "241",12,"Darius Slayton",NYG
+      "242",12,"Tampa Bay Buccaneers",
+      "243",12,"Corey Davis",NYJ
+      "244",12,"Van Jefferson",LAR
+      "245",12,"Kansas City Chiefs",K
+      "246",12,"Mecole Hardman Jr.",NYJ
+      "247",12,"Puka Nacua",LAR,
+      "248",12,"Allen Robinson II",PIT
+      "249",12,"Zonovan Knight",NYJ
+      "250",12,"Cordarrelle Patterson",ATL,
+      "251",12,"Sean Tucker",TB
+      "252",12,"Joshua Kelley",LAC
+      "253",12,"Zach Ertz",ARI,
+      "254",12,"Daniel Bellinger",NYG,
+      "255",12,"Marquez Valdes-Scantling",KC,
+      "256",12,"Kyren Williams",LAR,
+      "257",12,"Green Bay Packers",
+      "258",12,"Darnell Washington",PIT
+      "259",12,"Washington Commanders",WA
+      "260",12,"Ryan Tannehill",T
+      "261",12,"Robert Woods",HO
+      "262",12,"Tim Patrick",D
+      "263",12,"Jason Sanders",
+      "264",12,"Younghoe Koo",A
+      "265",12,"Cleveland Browns",C
+      "266",12,"Graham Gano",
+      "267",12,"James Robinson",NYG,
+      "268",12,"Miami Dolphins",MI
+      "269",12,"Russell Gage",TB
+      "270",12,"Xavier Hutchinson",HOU,
+      "271",12,"Cincinnati Bengals",C
+      "272",12,"Keaontay Ingram",ARI,
+      "273",12,"Los Angeles Rams",
+      "274",12,"Jason Myers",S
+      "275",12,"Greg Zuerlein",
+      "276",12,"David Bell",CL
+      "277",12,"Hendon Hooker",DET
+      "278",12,"Los Angeles Chargers",L
+      "279",13,"Jacksonville Jaguars",J
+      "280",13,"New Orleans Saints",N
+      "281",13,"Brandon McManus",
+      "282",13,"Jake Elliott",P
+      "283",13,"DeVante Parker",NE,
+      "284",13,"Indianapolis Colts",IN
+      "285",13,"Chase Edmonds",TB
+      "286",13,"Kenny McIntosh",SEA
+      "287",13,"Chris Rodriguez Jr.",WAS,
+      "288",13,"A.T. Perry",NO,"
+      "289",13,"Matt Gay",IND
+      "290",13,"D'Ernest Johnson",J
+      "291",13,"Jake Ferguson",DAL
+      "292",13,"Parker Washington",JAC,
+      "293",13,"Ty Chandler",MIN,
+      "294",13,"Wil Lutz",
+      "295",13,"Chris Boswell",
+      "296",13,"Taysom Hill",NO,
+      "298",13,"Cameron Dicker",L
+      "299",13,"Zack Moss",IN
+      "300",13,"Tyler Conklin",NYJ
+      "301",13,"Kyle Philips",TEN
+      "302",13,"Seattle Seahawks",
+      "304",13,"Matt Prater",A
+      "305",13,"Carolina Panthers",C
+      "306",13,"Tennessee Titans",T
+      "307",13,"Tyrion Davis-Price",SF
+      "308",13,"Baker Mayfield",
+      "309",13,"Isaiah McKenzie",IND
+      "310",13,"New York Giants",NY
+      "311",13,"Kevin Harris",N
+      "312",13,"Hassan Haskins",TEN
+      "313",13,"Jalen Tolbert",DAL,
+      "314",13,"Minnesota Vikings",MI
+      "315",13,"Logan Thomas",WAS,
+      "316",13,"Deon Jackson",IND
+      "317",13,"KJ Hamler",FA,
+      "318",13,"Ka'imi Fairbairn",
+      "319",13,"Brett Maher",DE
+      "320",13,"Greg Joseph",M
+      "321",13,"Laviska Shenault Jr.",CA
+      "322",13,"Michael Badgley",W
+      "323",13,"JaMycal Hasty",J
+      "324",13,"Nyheim Hines",BU
+      "325",13,"Dustin Hopkins",
+      "326",13,"Brenton Strange",JAC,
+      "327",13,"Nick Folk",NE
+      "328",13,"Riley Patterson",
+      "329",13,"Trey Palmer",TB,"
+      "330",13,"Devin Duvernay",BAL
+      "331",14,"Charlie Jones",CIN,
+      "332",14,"Kendrick Bourne",NE,"
+      "333",14,"Ronald Jones II",DAL
+      "334",14,"Dontayvion Wicks",GB,
+      "335",14,"Latavius Murray",BU
+      "336",14,"Detroit Lions",D
+      "337",14,"Chris Evans",C
+      "338",14,"Sam Darnold",
+      "339",14,"Greg Dortch",ARI,"
+      "340",14,"Austin Hooper",L
+      "341",14,"Harrison Bryant",C
+      "342",14,"Albert Okwuegbunam",DEN
+      "343",14,"Jordan Mason",
+      "344",14,"Josh Reynolds",DE
+      "345",14,"Zack Kuntz",NYJ
+      "346",14,"Robert Tonyan",CH
+      "347",14,"Boston Scott",PHI,
+      "348",14,"Sterling Shepard",
+      "349",14,"Richie James Jr.",
+      "350",14,"Arizona Cardinals",</p>
+  </div>
+
+  <!--loading my javascript as a ES module-->
+  <script type= "module" src="script.js">
+
+  </script>
+</body>
+</html>
+
